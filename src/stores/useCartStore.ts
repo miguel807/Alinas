@@ -6,11 +6,21 @@ export const useCartStore = defineStore('cart', {
   state: () => ({
     cartProductsList: [] as ProductCart[],
     totalAmount: 0 as number,
+    totalProducts: 0 as number,
   }),
   // definición de los getters
   getters: {
     getCart: (state) => {
       return state.cartProductsList;
+    },
+    getTotalProducts: (state) => {
+      state.totalProducts = state.cartProductsList.reduce(
+        (acumulador: number, product: ProductCart) => {
+          return acumulador + product.counts;
+        },
+        0
+      );
+      return state.totalProducts;
     },
     getTotalAmount: (state) => {
       state.totalAmount = state.cartProductsList.reduce(

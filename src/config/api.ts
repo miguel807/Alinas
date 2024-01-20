@@ -6,4 +6,7 @@ export const api = {
   createCategoryByName: 'http://localhost:3000/category',
   uploadImage: 'http://localhost:3000/product/uploadImage',
   downloadImage: 'http://localhost:3000/product/downloadImage',
+  getAllProducts: 'http://localhost:3000/product/',
+  getUser: 'http://localhost:3000/user/',
+  login: 'http://localhost:3000/user/login/',
 };

@@ -13,6 +13,7 @@ export default interface Product {
   grm: number;
   ingredients: string;
   id_category: number;
+  isVisible?: boolean;
 }
 
 export default interface ProductCart {
