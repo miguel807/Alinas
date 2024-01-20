@@ -1,13 +1,13 @@
 export const api = {
-  getAllCategories: 'http://alinasbackend.onrender.com/category/',
+  getAllCategories: 'https://alinasbackend.onrender.com/category/',
   getProductsByCategory:
-    'http://alinasbackend.onrender.com/category/getProductsByCategory',
-  getCategoryByName: 'http://alinasbackend.onrender.com/category',
-  deleteCategoryByName: 'http://alinasbackend.onrender.com/category',
-  createCategoryByName: 'http://alinasbackend.onrender.com/category',
-  uploadImage: 'http://alinasbackend.onrender.com/product/uploadImage',
-  downloadImage: 'http://alinasbackend.onrender.com/product/downloadImage',
-  getAllProducts: 'http://alinasbackend.onrender.com/product/',
-  getUser: 'http://alinasbackend.onrender.com/user/',
-  login: 'http://alinasbackend.onrender.com/user/login/',
+    'https://alinasbackend.onrender.com/category/getProductsByCategory',
+  getCategoryByName: 'https://alinasbackend.onrender.com/category',
+  deleteCategoryByName: 'https://alinasbackend.onrender.com/category',
+  createCategoryByName: 'https://alinasbackend.onrender.com/category',
+  uploadImage: 'https://alinasbackend.onrender.com/product/uploadImage',
+  downloadImage: 'https://alinasbackend.onrender.com/product/downloadImage',
+  getAllProducts: 'https://alinasbackend.onrender.com/product/',
+  getUser: 'https://alinasbackend.onrender.com/user/',
+  login: 'https://alinasbackend.onrender.com/user/login/',
 };
