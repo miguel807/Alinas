@@ -46,7 +46,7 @@ import CaruselComponent from 'src/components/CaruselComponent.vue';
 
 const categoryName: Ref = ref("Alinas'Pizzas");
 const uri =
-  'https://alinasbackend.onrender.com/product/downloadImage/Pizza.jpg';
+  'https://alinasbackend.onrender.com/product/downloadImage/pizza.jpg';
 const categoryPhoto: Ref = ref(uri);
 const change = (name: string, photo: string) => {
   categoryName.value = name;
