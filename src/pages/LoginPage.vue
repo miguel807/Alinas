@@ -55,7 +55,7 @@ const login = async () => {
     password: password.value
   };
   try {
-    const resp = await fetch('http://localhost:3000/user/login', {
+    const resp = await fetch('http://alinasbackend.onrender.com/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

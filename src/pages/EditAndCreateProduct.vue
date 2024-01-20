@@ -99,31 +99,31 @@ onMounted(async () => {
   productIngredient.value = product.value.ingredients;
 });
 
-const editProduct = () => {
+const editProduct = async () => {
   let payload;
   if (productPhoto.value !== null) {
     const uriPhoto = `${api.downloadImage}/${productPhoto.value.name}`;
     payload = {
       name: productName.value,
       photo: uriPhoto,
-      price: productPrice.value,
+      price: parseInt(productPrice.value),
 
       description: productDescription.value
     };
   } else {
     payload = {
       name: productName.value,
-      price: productPrice.value,
+      price: parseInt(productPrice.value),
 
       description: productDescription.value
     };
   }
-  fetchService.updateOneProduct(
+  await fetchService.updateOneProduct(
     router.params.name,
     payload,
     productPhoto.value
   );
-  showNotifyUpdated();
+  await showNotifyUpdated();
 };
 
 const createProduct = () => {
