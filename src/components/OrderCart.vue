@@ -5,7 +5,7 @@
   >
     <q-card
       class="my-card full-width"
-      style="width: 99%; border: 1px solid rgb(180, 180, 180); height: 190px"
+      style="width: 99%; border: 1px solid rgb(180, 180, 180); height: 230px"
     >
       <q-btn
         flat
@@ -20,19 +20,25 @@
           name="delete"
         ></q-icon>
       </q-btn>
-      <q-card-section horizontal>
+      <q-card-section
+        horizontal
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: start;
+          margin: auto;
+        "
+      >
         <q-img
-          class="col-4"
+          class="col-5"
+          fit="cover"
           :src="props.photo"
-          height="100%"
-          fit="scale-down"
           style="
-            border-radius: 10px;
             margin-top: 2px;
-            margin: auto;
-            max-height: 70px;
-            height: 70px;
-            border-radius: 10px;
+
+            max-height: 120px;
+            height: 120px;
+            border-radius: 12px;
           "
         />
 

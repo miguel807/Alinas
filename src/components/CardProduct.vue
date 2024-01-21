@@ -8,16 +8,14 @@
       <q-card-section horizontal>
         <q-img
           class="col-5"
+          fit="cover"
           :src="props.photo"
-          height="100%"
-          fit="scale-down"
           style="
-            border-radius: 10px;
             margin-top: 2px;
             margin: auto;
             max-height: 150px;
             height: 150px;
-            border-radius: 10px;
+            border-radius: 12px;
           "
         />
 
