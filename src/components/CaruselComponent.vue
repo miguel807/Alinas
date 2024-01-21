@@ -5,24 +5,21 @@
     transition-next="slide-left"
     swipeable
     animated
-    control-type="regular"
     control-color="red-9"
-    control-text-color="white"
+    control-text-color="dark"
     navigation
     infinite
     :autoplay="autoplay"
     arrows
-    height="177px"
+    height="160px"
     class="shadow-2 rounded-borders"
-    @mouseenter="autoplay = false"
-    @mouseleave="autoplay = true"
-    style="background-color: #d9d6d6; margin: auto"
+    style="background-color: $red-9; color: $red-9; margin: auto"
   >
     <q-carousel-slide
       v-for="(group, index) in groupedItems"
       :key="index"
       :name="`group-${index}`"
-      style="height: 170px"
+      style="height: 160px"
     >
       <div style="height: 100%">
         <div
@@ -36,14 +33,23 @@
           >
             <q-img
               :src="item.photo"
-              fit="cover"
-              height="180px"
+              fit="fill"
+              height="130px"
               @click="ChangeCategoryhandleClick(item.name, item.photo)"
               style="border-radius: 8px"
             >
               <div
-                class="absolute-center text-subtitle2 text-center"
-                style="background-color: #fd0c0c93; border-radius: 10px"
+                class="absolute-center text-center"
+                style="
+                  font-size: small;
+                  background-color: #fd0c0c93;
+                  border-radius: 10px;
+                  overflow: auto;
+                  max-height: 82px;
+                  padding-left: 6px;
+                  padding-right: 6px;
+                  text-overflow: ellipsis;
+                "
               >
                 {{ item.name }}
               </div></q-img
@@ -82,6 +88,14 @@ const groupedItems = computed(() => {
   return groups;
 });
 </script>
+
+<style scoped>
+.q-carousel__control {
+  position: relative !important;
+  bottom: -10px !important;
+  /* Ajusta este valor según tus necesidades */
+}
+</style>
 
 <!--
 <template>

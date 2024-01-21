@@ -32,8 +32,17 @@
         </q-toolbar-title>
 
         <div style="padding-top: 25px">
-          <router-link :to="{ name: 'adminPanel' }">
-            <q-btn round flat icon="person" style="color: #cf0000" size="md" />
+          <router-link
+            :to="{ name: 'adminPanel' }"
+            style="text-decoration: none"
+          >
+            <q-btn
+              round
+              flat
+              icon="person"
+              style="color: #cf0000; text-decoration: none"
+              size="md"
+            />
           </router-link>
           <q-btn
             round

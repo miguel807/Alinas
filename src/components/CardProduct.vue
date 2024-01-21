@@ -10,8 +10,15 @@
           class="col-5"
           :src="props.photo"
           height="100%"
-          fit="contain"
-          style="border-radius: 10px; margin-top: 2px; margin: auto"
+          fit="scale-down"
+          style="
+            border-radius: 10px;
+            margin-top: 2px;
+            margin: auto;
+            max-height: 150px;
+            height: 150px;
+            border-radius: 10px;
+          "
         />
 
         <q-card-section
@@ -106,4 +113,5 @@ const handleClickAddProductToCart = (props: any) => {
 .my-card
   width: 100%
   max-width: 500px
+  height: min-content
 </style>

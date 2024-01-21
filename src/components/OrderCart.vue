@@ -3,7 +3,10 @@
     class="q-ml-xs q-mr-xs row items-start q-gutter-md"
     style="width: 99%; margin-top: 2px"
   >
-    <q-card class="my-card full-width" style="width: 99%">
+    <q-card
+      class="my-card full-width"
+      style="width: 99%; border: 1px solid rgb(180, 180, 180); height: 190px"
+    >
       <q-btn
         flat
         color="primary"
@@ -19,10 +22,18 @@
       </q-btn>
       <q-card-section horizontal>
         <q-img
-          class="col-5"
+          class="col-4"
           :src="props.photo"
-          height="100px"
-          style="border-radius: 10px; margin-top: 2px"
+          height="100%"
+          fit="scale-down"
+          style="
+            border-radius: 10px;
+            margin-top: 2px;
+            margin: auto;
+            max-height: 70px;
+            height: 70px;
+            border-radius: 10px;
+          "
         />
 
         <q-card-section>
@@ -38,7 +49,12 @@
       <q-separator />
 
       <q-card-actions
-        style="display: flex; flex-direction: row; justify-content: center"
+        style="
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 90%;
+        "
       >
         <q-btn
           flat
@@ -53,16 +69,17 @@
             name="remove"
           ></q-icon>
         </q-btn>
-        <span style="color: rgb(57, 56, 56)" class="text-h6">
+        <span style="color: rgb(57, 56, 56)" class="text-h7">
           {{ $props.counts }} x ${{ props.price }} =
         </span>
         <span
           style="color: black; font-weight: bold; margin-left: 5px"
-          class="text-h6 q-ml-xm"
+          class="text-h7 q-ml-xm"
         >
           {{ props.pricePerProduct }} CUP</span
         >
         <q-btn
+          style="outline: 2px solid yellow"
           flat
           color="primary"
           round
