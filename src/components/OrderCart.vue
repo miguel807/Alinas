@@ -21,7 +21,7 @@
         <q-img
           class="col-5"
           :src="props.photo"
-          height="90px"
+          height="100px"
           style="border-radius: 10px; margin-top: 2px"
         />
 
@@ -56,7 +56,10 @@
         <span style="color: rgb(57, 56, 56)" class="text-h6">
           {{ $props.counts }} x ${{ props.price }} =
         </span>
-        <span style="color: black; font-weight: bold" class="text-h6 q-ml-xm">
+        <span
+          style="color: black; font-weight: bold; margin-left: 5px"
+          class="text-h6 q-ml-xm"
+        >
           {{ props.pricePerProduct }} CUP</span
         >
         <q-btn

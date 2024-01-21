@@ -12,17 +12,17 @@
     infinite
     :autoplay="autoplay"
     arrows
-    height="160px"
+    height="177px"
     class="shadow-2 rounded-borders"
     @mouseenter="autoplay = false"
     @mouseleave="autoplay = true"
-    style="background-color: #d9d6d6"
+    style="background-color: #d9d6d6; margin: auto"
   >
     <q-carousel-slide
       v-for="(group, index) in groupedItems"
       :key="index"
       :name="`group-${index}`"
-      style="height: 120px"
+      style="height: 170px"
     >
       <div style="height: 100%">
         <div
@@ -37,12 +37,12 @@
             <q-img
               :src="item.photo"
               fit="cover"
-              height="130px"
+              height="180px"
               @click="ChangeCategoryhandleClick(item.name, item.photo)"
               style="border-radius: 8px"
             >
               <div
-                class="absolute-center text-subtitle1 text-center"
+                class="absolute-center text-subtitle2 text-center"
                 style="background-color: #fd0c0c93; border-radius: 10px"
               >
                 {{ item.name }}

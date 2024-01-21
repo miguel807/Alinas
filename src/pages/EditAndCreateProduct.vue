@@ -104,7 +104,7 @@ const editProduct = async () => {
   if (productPhoto.value !== null) {
     const uriPhoto = `${api.downloadImage}/${productPhoto.value.name}`;
     payload = {
-      name: productName.value,
+      name: productName.value.trim(),
       photo: uriPhoto,
       price: parseInt(productPrice.value),
 
@@ -112,7 +112,7 @@ const editProduct = async () => {
     };
   } else {
     payload = {
-      name: productName.value,
+      name: productName.value.trim(),
       price: parseInt(productPrice.value),
 
       description: productDescription.value
@@ -131,7 +131,7 @@ const createProduct = () => {
 
   const uriPhoto = `${api.downloadImage}/${productPhoto.value.name}`;
   payload = {
-    name: productName.value,
+    name: productName.value.trim(),
     photo: uriPhoto,
     price: parseInt(productPrice.value),
     isVisible: true,

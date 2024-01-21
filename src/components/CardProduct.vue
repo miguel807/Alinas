@@ -11,10 +11,16 @@
           :src="props.photo"
           height="100%"
           fit="contain"
-          style="border-radius: 10px; margin-top: 2px"
+          style="border-radius: 10px; margin-top: 2px; margin: auto"
         />
 
-        <q-card-section style="text-transform: capitalize">
+        <q-card-section
+          style="
+            text-transform: capitalize;
+
+            width: 100%;
+          "
+        >
           <q-title
             class="text-h6"
             style="color: black; font-weight: bold; text-transform: capitalize"
@@ -29,6 +35,7 @@
               display: flex;
               flex-direction: row;
               justify-content: space-between;
+              align-items: center;
             "
           >
             <div>

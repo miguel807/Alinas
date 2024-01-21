@@ -13,7 +13,8 @@
           <div
             class="text-h5 text-center"
             style="
-              height: 50px;
+              height: max-content;
+              padding-bottom: 5px;
               background-color: #cf0000cc;
               width: 80%;
               text-align: center;

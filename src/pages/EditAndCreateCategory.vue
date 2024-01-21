@@ -67,7 +67,7 @@ function showNotifyUpdated() {
 const createCategory = () => {
   const uriPhoto = `${api.downloadImage}/${file.value.name}`;
   const payload = {
-    name: categoryName.value,
+    name: categoryName.value.trim(),
     photo: uriPhoto,
     description: '',
     count_products: 1
@@ -82,12 +82,12 @@ const editCategory = () => {
   if (file.value !== null) {
     const uriPhoto = `${api.downloadImage}/${file.value.name}`;
     payload = {
-      name: categoryName.value,
+      name: categoryName.value.trim(),
       photo: uriPhoto
     };
   } else {
     payload = {
-      name: categoryName.value
+      name: categoryName.value.trim()
     };
   }
   fetchService.updateOneCategory(router.params.name, payload, file.value);
