@@ -99,7 +99,7 @@ export default class FetchData {
     }
   }
 
-  async fetchOneProduct(name: string) {
+  async fetchOneProduct(name: number) {
     try {
       const res = await fetch(`${this.getAllProductsUri}${name}`);
       this.product.value = await res.json();
@@ -205,7 +205,7 @@ export default class FetchData {
     }
   }
 
-  async updateOneProduct(name: string, payload: payloadProduct, image: File) {
+  async updateOneProduct(name: number, payload: payloadProduct, image: File) {
     if (image != null) {
       const formData = new FormData();
       formData.append('file', image);
@@ -232,7 +232,7 @@ export default class FetchData {
     }
   }
 
-  async deleteOneProduct(name: string) {
+  async deleteOneProduct(name: number) {
     try {
       const response = await fetch(`${api.getAllProducts}${name}`, {
         method: 'DELETE',

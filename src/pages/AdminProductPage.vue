@@ -23,6 +23,7 @@
       :description="itm.description"
       :price="itm.price"
       :isVisible="itm.isVisible"
+      :id="itm.id"
       style="width: 25%"
     ></ProductCardAdmin>
   </div>

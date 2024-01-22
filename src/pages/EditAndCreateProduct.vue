@@ -1,7 +1,7 @@
 <template>
   <h5 v-if="router.params.name !== 'empty'">
     Editar Producto:
-    <span style="color: #ce0e31"> {{ router.params.name }}</span>
+    <span style="color: #ce0e31"> {{ productName }}</span>
   </h5>
   <h5 v-else>Crear Nuevo Producto</h5>
   <div style="width: 30%">

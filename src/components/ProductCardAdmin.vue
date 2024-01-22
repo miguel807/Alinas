@@ -55,14 +55,12 @@
           color="dark"
           round
           class="q-mr-md"
-          @click="
-            fetchService.deleteOneProduct(props.title), showNotifyDeleted()
-          "
+          @click="fetchService.deleteOneProduct(props.id), showNotifyDeleted()"
         >
           Eliminar</q-btn
         >
         <router-link
-          :to="{ name: 'adminProductName', params: { name: props.title } }"
+          :to="{ name: 'adminProductName', params: { name: props.id } }"
         >
           <q-btn flat color="negative" round class="q-mr-md"> Editar</q-btn>
         </router-link>
@@ -97,7 +95,8 @@ const props = defineProps({
   price: Number,
   grm: Number,
   description: String,
-  isVisible: Boolean
+  isVisible: Boolean,
+  id: Number
 });
 isVisibl.value = props.isVisible;
 const handleClickIsVisible = async () => {
@@ -105,7 +104,7 @@ const handleClickIsVisible = async () => {
     isVisible: isVisibl.value
   };
   try {
-    const response = await fetch(`${api.getAllProducts}${props.title}`, {
+    const response = await fetch(`${api.getAllProducts}${props.id}`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json'
