@@ -112,6 +112,11 @@ export default class FetchData {
     try {
       const res = await fetch(this.getAllCategoriesUri);
       this.categories.value = await res.json();
+      console.log(this.categories.value);
+      this.categories.value.sort(function (a, b) {
+        return a.id - b.id;
+      });
+      console.log(this.categories.value);
     } catch (err) {
       console.log(err);
     }

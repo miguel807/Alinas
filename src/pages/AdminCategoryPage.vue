@@ -32,10 +32,10 @@ import { useQuasar } from 'quasar';
 
 const fetchData = new FetchData();
 const router = useRoute();
-const categories = fetchData.getAllCategories();
+let categories = fetchData.getAllCategories();
 
 onMounted(async () => {
-  fetchData.fetchAllCategories();
+  await fetchData.fetchAllCategories();
 });
 </script>
 

@@ -3,6 +3,7 @@ export default interface Category {
   photo: string;
   description: string;
   count_products: number;
+  id?: number;
 }
 
 export default interface Product {
